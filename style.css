@@ -5,6 +5,7 @@
     text-decoration: none;
     font-family: cursive;
 }
+/*header*/
 header .top{
 display: flex;
 padding: 0 20px;
@@ -33,6 +34,7 @@ header .top .bar ul li a{
     font-weight: bold;
     color: #FFEBD4;
 }
+/*hero*/
 header #hero{
    display: flex;
    align-items: center;
@@ -82,15 +84,13 @@ header #hero .caption button:hover{
     color: white;
     font-weight: bold;
  }
+/*main*/
 
+/*products*/
  main #products , #aboutus{
-    
     background-image:url(https://i.pinimg.com/736x/b7/87/1b/b7871b33ee3a573c239be98d4b3c7f9e.jpg) ;
-
     margin: 0 20px;
     padding: 20px;
-    
-    
  }
   main #products h2{
     color: #f4c2c2;
@@ -104,7 +104,6 @@ header #hero .caption button:hover{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
  }
  main .products .card{
     background-color: #fef8f8;
@@ -315,3 +314,125 @@ main #conatact .order form button:hover {
     background-color: #F0A8D0;
 }
 
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    /*header*/
+    header .top{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .top .logo{
+        padding: 10px;
+        font-size: 15px;
+    }
+    header .top .logo img{
+        width: 30px;
+    }
+    header .top .bar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 5px 0;
+        border-top: 1px solid #ccc;
+        }
+
+    header .top .bar ul li {
+        padding: 5px;
+        text-align: left;
+    }
+    /*hero*/
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    header #hero .caption {
+        padding: 0;
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    header #hero .caption h2 {
+    font-size: 3rem;
+    }
+    
+    header #hero .caption p {
+        font-size: 2rem;
+    }
+
+    .caption button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        border-radius: 20px;
+    }
+
+    header #hero  img {
+        margin-top: 20px;
+    }
+    /*main*/
+    /*products*/
+    main #products,
+    #aboutus {
+        background-size: cover;
+    }
+
+    main .products .card {
+    width: 100%;
+    padding: 10px;
+    }
+        /*about us*/
+    main #aboutus {
+        padding: 0;
+    }
+    main #aboutus .info {
+        flex-direction: column;
+    }
+    main #aboutus .info p {
+        width: 100%;
+        margin: auto;
+    }
+    main #aboutus .features-container {
+        
+        margin: 10px;
+    }
+    main #aboutus .features-container .feature {
+        width: 100%;
+        flex-direction: column;
+        text-align: left;
+    
+    }
+    main #aboutus .features-container .feature.r  {
+        flex-direction: column-reverse;        
+    }
+    main #aboutus .features-container .feature .textR {
+        text-align: left;
+    }
+    /*conatact*/
+    main #conatact {
+        flex-direction: column;
+    }
+    main #conatact .social-media {
+        margin: auto;
+        display: flex;
+    }
+    main #conatact .social-media a {
+        flex-direction: column;
+        margin: 10px;
+    }
+    main #conatact .social-media img {
+        width: 30px;
+    }
+    main #conatact .more {
+        width: 80%;
+        margin: auto;
+        border-top: 2px dotted #624E88;
+        border-bottom: 2px dotted #624E88;
+        border-right: none;
+        border-left: none;
+    }
+    main #conatact .order form {
+        margin: 30px;
+    }
+
+}
